@@ -1,0 +1,29 @@
+.root {
+  position: relative;
+  margin-top: 3rem;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .titleSection {
+    text-align: center;
+  }
+  .itemsWrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    p {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: justify;
+      text-align-last: center;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+  .bottomSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+}

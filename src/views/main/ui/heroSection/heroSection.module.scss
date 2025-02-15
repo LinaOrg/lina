@@ -1,0 +1,32 @@
+.root {
+  position: relative;
+  .heroSectionBg {
+    z-index: -1;
+    top: auto !important;
+    bottom: -255px !important;
+  }
+  .heroSection {
+    position: relative;
+    display: flex;
+    align-items: start;
+    margin-top: 3rem;
+    .textContent {
+      text-align: center;
+      width: 100%;
+      max-width: 485px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      p {
+        font-size: var(--text-size);
+      }
+    }
+  }
+}

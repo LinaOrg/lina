@@ -1,0 +1,18 @@
+.root {
+  position: relative;
+  margin-top: 3rem;
+  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .titleSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cardList {
+    margin-top: 2rem;
+    :global(.swiper) {
+      overflow: visible !important;
+    }
+  }
+}

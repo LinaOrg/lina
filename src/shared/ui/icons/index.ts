@@ -1,0 +1,11 @@
+export { default as ProfileIcon } from "./profile";
+export { default as SearchIcon } from "./search";
+export { default as CallIcon } from "./call";
+export { default as InstagramIcon } from "./instagram";
+export { default as LinkedInIcon } from "./linkedin";
+export { default as AparatIcon } from "./aparat";
+export { default as PhoneIcon } from "./phone";
+export { default as EmailIcon } from "./email";
+export { default as TriangleIcon } from "./triangle";
+export { default as CalendarIcon } from "./calendar";
+export { default as CircleArrowIcon } from "./circleArrow";
