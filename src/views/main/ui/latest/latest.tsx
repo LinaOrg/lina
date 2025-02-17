@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./latest.module.scss";
-import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
+import { Image } from "@/shared/ui";
 
 export const Latest = () => {
   const classNames = clsx("container", classes.root);

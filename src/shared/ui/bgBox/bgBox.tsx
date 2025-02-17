@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from "react";
 import classes from "./bgBox.module.scss";
-import Image from "next/image";
 import clsx from "clsx";
 import { CircleArrowIcon } from "../icons";
+import { Image } from "../image";
 
 type TProps = {
   children: ReactNode;

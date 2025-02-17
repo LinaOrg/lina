@@ -1,8 +1,8 @@
-import Image from "next/image";
 import classes from "./footer.module.scss";
 import { Menus } from "./menus";
 import { SocialMedia } from "./socialMedia";
 import { ContactInfo } from "./contactInfo";
+import { Image } from "@/shared/ui";
 
 export const Footer = () => {
   return (

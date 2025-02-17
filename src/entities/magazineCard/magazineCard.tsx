@@ -1,7 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import classes from "./magazineCard.module.scss";
-import { Button, CalendarIcon, TriangleIcon } from "@/shared/ui";
+import { Button, CalendarIcon, Image, TriangleIcon } from "@/shared/ui";
 import Link from "next/link";
 
 export const MagazineCard = () => {

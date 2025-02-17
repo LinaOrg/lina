@@ -1,5 +1,4 @@
-import { BgBox, CircleArrowIcon } from "@/shared/ui";
-import Image from "next/image";
+import { BgBox, CircleArrowIcon, Image } from "@/shared/ui";
 import React from "react";
 import classes from "./linaProducts.module.scss";
 

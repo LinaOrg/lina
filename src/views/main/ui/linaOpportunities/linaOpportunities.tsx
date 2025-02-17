@@ -1,9 +1,7 @@
 import classes from "./linaOpportunities.module.scss";
 import clsx from "clsx";
-import { MagazineCard } from "@/entities";
 import Link from "next/link";
-import { Button, Swiper } from "@/shared/ui";
-import Image from "next/image";
+import { Button, Image } from "@/shared/ui";
 export const LinaOpportunities = () => {
   const classNames = clsx("container", classes.root);
   return (

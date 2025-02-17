@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import classes from "./heroSection.module.scss";
 import clsx from "clsx";
-import { Button } from "@/shared/ui";
+import { Button, Image } from "@/shared/ui";
 export const HeroSection = () => {
   const classNames = clsx("container", classes.heroSection);
   return (

@@ -1,5 +1,5 @@
+import { Image } from "@/shared/ui";
 import classes from "./linaAchivements.module.scss";
-import Image from "next/image";
 export const LinaInventions = () => {
   return (
     <>
