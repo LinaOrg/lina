@@ -1,3 +1,19 @@
-.root{
-  
+.root {
+  position: relative;
+  .imageWrapper {
+    position: relative;
+    height: 310px;
+    background: url("/images/product-bg.png") no-repeat center center;
+    background-size: contain;
+    margin-bottom: 2.625rem;
+    .productImage {
+      position: relative;
+      top: -7rem;
+      z-index: 2;
+      right: 0;
+    }
+  }
+  .contentWrapper {
+    text-align: center;
+  }
 }

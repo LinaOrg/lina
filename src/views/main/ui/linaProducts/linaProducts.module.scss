@@ -20,16 +20,20 @@
   width: 100%;
   padding-right: 85px;
   padding-left: 85px;
-  .bgBox {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
+  .contentWrapper {
+    padding-top: 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    background: url("/images/rect-bg.png") no-repeat center center;
+    background-size: contain;
+    height: 300px;
   }
   h4 {
     font-size: 2.25rem;
   }
   p {
     font-size: 1.25rem;
+    line-height: 2.125rem;
   }
   .storiesWrapper {
     flex: 1;
