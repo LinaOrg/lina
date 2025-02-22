@@ -5,7 +5,7 @@ import { LinaAchievements } from "./linaAchievements";
 import { Latest } from "./latest";
 import { LinaProducts } from "./linaProducts";
 
-//this is a test 
+
 export function Main() {
   return (
     <>
