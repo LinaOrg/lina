@@ -1,9 +1,10 @@
 import React from "react";
-import { Title } from "@/shared/ui";
-import styles from "./JobPosting.module.scss";
-import DividerComponent from "../../../shared/ui/divider/divider";
+import { Divider, Title } from "@/shared/ui";
+import styles from "./jobPosting.module.scss";
 
-export const HRJobPosting: React.FC = () => {
+
+
+export const JobPosting: React.FC = () => {
   const title = "کارشناس منابع انسانی";
 
   return (
@@ -14,7 +15,7 @@ export const HRJobPosting: React.FC = () => {
             {title}
           </Title>
           <div>
-            <DividerComponent width="521px" color="#B9B9B9" />
+          <Divider width="100%" height="2px" className={styles.customDivider} />
             عاشق ارتباط‌گیری با افراد هستید و برای همکاران خود سنگ تمام می‌گذارید؟
           </div>
           <div>
@@ -34,4 +35,5 @@ export const HRJobPosting: React.FC = () => {
     </div>
   );
 };
+
 

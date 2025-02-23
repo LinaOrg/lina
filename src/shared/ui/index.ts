@@ -4,5 +4,5 @@ export * from "./icons";
 export * from "./swiper";
 export * from "./image";
 export * from "./title";
-
+export * from "./divider";
 

@@ -1,10 +1,12 @@
-import { HRJobPosting } from "../jobPosting";
+import { JobPosting } from "./jobPosting";
+import { Conditions } from './conditions/conditions';
 
 
 export function Opportunities() {
   return (
     <>
-      <HRJobPosting/>
+      <JobPosting />
+      <Conditions/>
     </>
   );
 }

@@ -1,1 +1,1 @@
-export * from "./opportunities"
+export { Opportunities } from "./opportunities";
