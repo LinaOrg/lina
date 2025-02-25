@@ -11,7 +11,6 @@ const Salaries = () => {
     "امور مرتبط با آموزش",
     "بسته و هدایای مناسبتی",
   ];
-
   return (
     <div className={styles.container}>
       <div className={styles.cart}>
