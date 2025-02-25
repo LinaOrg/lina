@@ -7,18 +7,35 @@
   position: relative;
 }
 
+.title {
+  color: var(--text-color-title);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.curlyArrow{
+  position: absolute;
+  top: 15%;
+  right: 15%;
+}
+
 .contentBox {
   width: 70%;
   height: 13.0625rem;
   background-color: var(--primary-color);
   border-radius: 4.6875rem;
-  border-top-left-radius: 0;
   display: flex;
   align-items: center;
   position: relative;
   z-index: 2;
   padding: 1rem;
   z-index: 2;
+  -webkit-border-radius: 4.6875rem;
+  -moz-border-radius: 4.6875rem;
+  -ms-border-radius: 4.6875rem;
+  -o-border-radius: 4.6875rem;
 }
 
 .contentBox ul {
@@ -34,28 +51,6 @@
   color: var(--white-color);
 }
 
-.topTrick {
-  width: 20%;
-  height: 4rem;
-  background-color: #fff;
-  position: absolute;
-  top: -2.5rem;
-  right: -2.8rem;
-  border-bottom-left-radius: 2rem;
-  z-index: 0;
-}
-
-.topTrickinner {
-  width: 85%;
-  height: 2rem;
-  background-color: var(--primary-color);
-  position: absolute;
-  top: -1rem;
-  right: 10.2rem;
-  border-top-right-radius: 7rem;
-  border-top-left-radius: 7rem;
-  z-index: 1;
-}
 .shadowTop {
   width: 50%;
   height: 10rem;
@@ -64,7 +59,7 @@
   left: 12%;
   z-index: 1;
   border-radius: 5rem;
-  top: 4rem;
+  top: 4.6rem;
   border-bottom-left-radius: 0;
 }
 .shadowBottom {
