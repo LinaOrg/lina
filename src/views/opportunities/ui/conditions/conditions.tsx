@@ -10,6 +10,7 @@ export const Conditions: React.FC = () => {
     "ساکن پایتخت باشید.",
   ];
 
+  
   return (
     <div className={styles.container}>
       <Title size="lg" className={styles.title}>شرایط مورد نیاز</Title>
