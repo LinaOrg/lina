@@ -60,4 +60,5 @@ export const JobPosting: React.FC = () => {
       </div>
     </div>
   );
+  
 };
