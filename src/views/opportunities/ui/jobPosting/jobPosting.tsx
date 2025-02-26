@@ -16,7 +16,7 @@ export const JobPosting: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 402);
+      setIsMobile(window.innerWidth <= 991);
     };
 
     window.addEventListener("resize", handleResize);
@@ -60,5 +60,5 @@ export const JobPosting: React.FC = () => {
       </div>
     </div>
   );
-  
+
 };
