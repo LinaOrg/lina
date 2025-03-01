@@ -1,17 +1,10 @@
+"use client";
 import React from "react";
-import { clsx } from "clsx";
-import classes from "./header.module.scss";
-import { Logo } from "@/shared/ui";
-import { Menus } from "./menus";
-import { UserAcount } from "./userAcount";
+import { useDeviceStore } from "@/shared/model";
+import { HeaderMobile } from "./header.mobile";
+import { HeaderDesktop } from "./header.desktop";
 
 export const Header = () => {
-  const classNames = clsx("container", classes.header);
-  return (
-    <header className={classNames}>
-      <Logo />
-      <Menus />
-      <UserAcount />
-    </header>
-  );
+  const { isMobile } = useDeviceStore();
+  return isMobile ? <HeaderMobile /> : <HeaderDesktop />;
 };

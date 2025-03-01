@@ -15,6 +15,8 @@ interface IImage {
   className?: string;
   fill?: boolean;
   unoptimized?: boolean;
+  sizes?: string;
+  layout?: string;
 }
 export const Image = (props: IImage) => {
   const [error, setError] = useState<SyntheticEvent | null>(null);
@@ -34,6 +36,8 @@ export const Image = (props: IImage) => {
       loading={props.loading}
       fill={props.fill}
       unoptimized={props.unoptimized}
+      sizes={props.sizes}
+      layout={props.layout}
     />
   );
 };

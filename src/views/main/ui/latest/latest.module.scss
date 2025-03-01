@@ -2,6 +2,11 @@
   margin-top: 3rem;
   .titleSection {
     text-align: center;
+    @media screen and (max-width: 991px) {
+      h3 {
+        font-size: 1rem;
+      }
+    }
     .subTitle {
       margin-top: 1rem;
       display: flex;
