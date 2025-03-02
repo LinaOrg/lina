@@ -1,64 +1,57 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Divider, Title } from "@/shared/ui";
-import styles from "./jobPosting.module.scss";
+import React, { useEffect } from "react";
+import { useDeviceStore } from "@/shared/model";
+import { JobPostingMobile } from "./jobPostingMobile/jobPostingMobile";
+import { JobPostingDesktop } from "./jobPostingDesktop/jobPostingDesktop";
 
 export const JobPosting: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 402);
-
-
-  const [jobTitle, setJobTitle] = useState("کارشناس منابع انسانی");
-  const [preContentText, setPreContentText] = useState("عاشق ارتباط‌گیری با افراد هستید و برای همکاران خود سنگ تمام می‌گذارید؟");
-  const [textContent, setTextContent] = useState(
-    'نیازمند یک <span class="' + styles.localSpan + '">«کارشناس منابع انسانی»</span> هستیم که با شناسایی و جذب بهترین استعدادها، به سرمایه انسانی لینا اعتبار ببخشد، آموزش و ارزیابی کارکنان را در اولویت قرار دهد و با بهبود فرآیندهای استخدامی، نیروی کار را به موتور محرک سازمان تبدیل کند. اگر دغدغه ایجاد محیطی را دارید که حمایت از کارکنان آنجا، حرف اول را بزند، شرایط زیر را بررسی کنید.'
-  );
+  const { isMobile, setIsMobile } = useDeviceStore();
+  
+  const jobTitle = "کارشناس منابع انسانی";
+  const preContentText =
+    "عاشق ارتباط‌گیری با افراد هستید و برای همکاران خود سنگ تمام می‌گذارید؟";
+  const textContent = `نیازمند یک کارشناس منابع انسانی هستیم که با شناسایی و جذب بهترین استعدادها، به سرمایه انسانی اعتبار ببخشد، آموزش و ارزیابی کارکنان را در اولویت قرار دهد و با بهبود فرآیندهای استخدامی، نیروی کار را به موتور محرک سازمان تبدیل کند. اگر دغدغه ایجاد محیطی را دارید که حمایت از کارکنان آنجا، حرف اول را بزند، شرایط زیر را بررسی کنید.`;
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 991);
-    };
+    if (typeof window !== "undefined") {
+      setIsMobile(); 
+      const handleResize = () => setIsMobile();
+      window.addEventListener("resize", handleResize);
 
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, [setIsMobile]);
+
+  const addStylingToText = (text: string) => {
+    return text.replace(
+      /کارشناس منابع انسانی/g,
+      '<span style="color:var(--primary-color); font-weight: bold;">کارشناس منابع انسانی</span>'
+    );
+  };
+
+  const styledPreContentText = addStylingToText(preContentText);
+  const styledTextContent = addStylingToText(textContent);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
+    <div className="container">
+      <div className="content">
         {isMobile ? (
-          <>  
-            <Title size="lg" className={styles.title}>{jobTitle}</Title>
-            <div className={styles.imageContainer}>
-              <img src={"/images/handShake.png"} alt="Hand Shaking" />
-            </div>
-            <div className={styles.textContainer}>
-              <div className={styles.preContent}>
-                {preContentText}
-              </div> 
-              <Divider width="60%" height="1px" className={styles.customDivider} />
-              <div className={styles.textContent} dangerouslySetInnerHTML={{ __html: textContent }} />
-            </div>
-          </>
+          <JobPostingMobile
+            jobTitle={jobTitle}
+            preContentText={styledPreContentText}
+            textContent={styledTextContent}
+          />
         ) : (
-          <>
-            <div className={styles.textContainer}>
-              <Title size="lg" className={styles.title}>{jobTitle}</Title>
-              <Divider width="70%" height="1px" className={styles.customDivider} />
-              <div className={styles.preContent}>
-                {preContentText}
-              </div>
-              <div className={styles.textContent} dangerouslySetInnerHTML={{ __html: textContent }} />
-            </div>
-            <div className={styles.imageContainer}>
-              <img src={"/images/handShake.png"} alt="Hand Shaking" />
-            </div>
-          </>
+          <JobPostingDesktop
+            jobTitle={jobTitle}
+            preContentText={styledPreContentText}
+            textContent={styledTextContent}
+          />
         )}
       </div>
     </div>
   );
-
 };
