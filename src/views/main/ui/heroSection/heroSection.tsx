@@ -3,7 +3,9 @@
 import classes from "./heroSection.module.scss";
 import clsx from "clsx";
 import { Button, Image } from "@/shared/ui";
+import { useDeviceStore } from "@/shared/model";
 export const HeroSection = () => {
+  const { isMobile } = useDeviceStore();
   const classNames = clsx("container", classes.heroSection);
   return (
     <section className={classes.root}>
@@ -18,6 +20,7 @@ export const HeroSection = () => {
             به اردوی مزرعه کسب‌و‌کار لینا دعوت می کنیم
           </p>
           <Button
+            size={isMobile ? "xs" : "md"}
             onClick={() => {
               console.log("clicked");
             }}>
@@ -30,7 +33,6 @@ export const HeroSection = () => {
             alt="hero-section-bg"
             width={750}
             height={595}
-            unoptimized
           />
         </div>
       </div>

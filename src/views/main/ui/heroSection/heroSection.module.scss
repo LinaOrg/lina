@@ -4,12 +4,18 @@
     z-index: -1;
     top: auto !important;
     bottom: -255px !important;
+    @media screen and (max-width: 991px) {
+      bottom: -65px !important;
+    }
   }
   .heroSection {
     position: relative;
     display: flex;
     align-items: start;
     margin-top: 3rem;
+    @media screen and (max-width: 991px) {
+      margin-top: 1rem;
+    }
     .textContent {
       text-align: center;
       width: 100%;
@@ -18,14 +24,25 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
+
+      @media screen and (max-width: 991px) {
+        gap: 0.25rem;
+      }
       h2 {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        @media screen and (max-width: 991px) {
+          font-size: 0.75rem;
+        }
       }
       p {
-        font-size: var(--text-size);
+        font-size: 1rem;
+
+        @media screen and (max-width: 991px) {
+          font-size: 0.625rem;
+        }
       }
     }
   }
