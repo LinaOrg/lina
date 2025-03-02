@@ -16,6 +16,7 @@ const imageTexts = [
   "ارزیابی عملکرد کارکنان",
 ];
 
+
 const ImageList = () => {
   return (
     <div className={styles.container}>

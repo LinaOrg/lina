@@ -11,7 +11,7 @@ const Salaries = () => {
     "امور مرتبط با آموزش",
     "بسته و هدایای مناسبتی",
   ];
-
+  
   return (
     <div className={styles.container}>
       <div className={styles.cart}>
@@ -30,7 +30,7 @@ const Salaries = () => {
         </div>
       </div>
       <div className={styles.buttonContainer}>
-        <Button variant="filled" size="lg" color="primary" className={styles.btn}>
+        <Button variant="filled"  color="primary" className={styles.btn}>
         تکمیل فرم ثبت نام
         </Button>
       </div>
