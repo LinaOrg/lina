@@ -7,7 +7,7 @@
     rgba(192, 222, 185, 0.8) 76.29%,
     #b7d3af 98.87%
   );
-  height: 310px;
+  min-height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +27,7 @@
     z-index: 1;
     display: flex;
     gap: 2rem;
+
     a {
       position: relative;
       &::before {
@@ -47,6 +48,10 @@
           display: none;
         }
       }
+      @media screen and (max-width: 991px) {
+        display: flex;
+        flex-direction: row;
+      }
     }
     &.contactInfo {
       a {
@@ -62,17 +67,36 @@
         }
       }
     }
+
+    @media screen and (max-width: 991px) {
+      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+      a {
+        &::before {
+          display: none;
+        }
+      }
+    }
   }
-}
-.copyRight {
-  p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 50px;
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
+  .copyRight {
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 50px;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      @media screen and (max-width: 991px) {
+        max-width: 213px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    gap: 1rem;
   }
 }

@@ -1,6 +1,5 @@
 import { create } from "zustand";
 
-
 const MOBILE_BREAKPOINT = 991;
 
 interface DeviceState {
@@ -11,11 +10,5 @@ interface DeviceState {
 export const useDeviceStore = create<DeviceState>((set) => ({
   isMobile: false,
 
-  setIsMobile: (value) => {
-    const newValue =
-      value !== undefined ? value : typeof window !== "undefined" && window.innerWidth <= MOBILE_BREAKPOINT;
-    set({ isMobile: newValue });
-  },
+  setIsMobile: (value) => set({ isMobile: value }),
 }));
-
-
