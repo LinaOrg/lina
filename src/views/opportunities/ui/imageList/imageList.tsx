@@ -1,39 +1,29 @@
-import React from 'react';
-import styles from "./imageList.module.scss";
-import { Title } from '@/shared/ui';
+"use client";
 
-const images = [
-  "/images/imageListItem1.png",
-  "/images/imageListItem2.png",
-  "/images/imageListItem3.png",
-  "/images/imageListItem4.png",
-];
+import React, { useEffect } from "react";
+import { useDeviceStore } from "@/shared/model";
+import { ImageListDesktop } from "./imageListDesktop";
+import { ImageListMobile } from "./imageListMobile/imageListMobile";
 
-const imageTexts = [
-  "تنظیم قرارداد‌ها",
-  "محاسبه حقوق و دستمزد",
-  "پیگیری امور بیمه کارکنان",
-  "ارزیابی عملکرد کارکنان",
-];
-
+const MOBILE_BREAKPOINT = 991;
 
 const ImageList = () => {
-  return (
-    <div className={styles.container}>
-      <Title size="lg" className={styles.title}>
-        ارزشی که برای ما خلق می‌کنید
-      </Title>
-      <div className={styles.imageWrapper}>
-        {images.map((src, index) => (
-          <div key={index} className={styles.imageContainer}>
-            <img src="/images/border-image.png" alt="border" className={styles.borderImg} />
-            <img src={src} alt={`item-${index + 1}`} className={styles.image} />
-            <span className={styles.imageText}>{imageTexts[index]}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  const { isMobile, setIsMobile } = useDeviceStore();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setIsMobile]);
+
+  return isMobile ? <ImageListMobile /> : <ImageListDesktop />;
 };
 
 export default ImageList;
