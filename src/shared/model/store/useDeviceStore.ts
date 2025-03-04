@@ -17,3 +17,5 @@ export const useDeviceStore = create<DeviceState>((set) => ({
     set({ isMobile: newValue });
   },
 }));
+
+
