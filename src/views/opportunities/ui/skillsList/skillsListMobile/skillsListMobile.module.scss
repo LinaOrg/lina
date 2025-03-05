@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 87%;
+    height: 100%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    gap: 2rem;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.customDivider {
+    background-color: var(--divider-color);
+    margin-bottom: 1rem; 
+    margin-top: 0.5rem; 
+}
+
+.title {
+    line-height: 1.567rem; 
+    font-weight: 700;
+    font-size: 1rem; 
+    line-height: 1.32625rem; 
+}
+
+.textContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-weight: 400;
+    font-size: 1.5rem; 
+    line-height: 2.27375rem; 
+    letter-spacing: 0%;
+    flex-grow: 1;
+}
+
+.items {
+    li {
+        font-weight: 400;
+        font-size: 0.875rem; 
+        list-style-position: inside;
+        list-style-type: disc; 
+        width: 100%;
+    }
+}

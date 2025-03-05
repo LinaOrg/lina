@@ -7,7 +7,7 @@ import { ImageListMobile } from "./imageListMobile/imageListMobile";
 
 const MOBILE_BREAKPOINT = 991;
 
-const ImageList = () => {
+export const ImageList = () => {
   const { isMobile, setIsMobile } = useDeviceStore();
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const ImageList = () => {
   return isMobile ? <ImageListMobile /> : <ImageListDesktop />;
 };
 
-export default ImageList;
+
