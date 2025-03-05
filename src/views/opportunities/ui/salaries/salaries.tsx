@@ -1,41 +1,30 @@
-import React from "react";
-import styles from "./salaries.module.scss";
-import { Title } from "@/shared/ui";
-import { Button } from "@/shared/ui/button";
+"use client";
 
-const Salaries = () => {
-  const title = "حقوق و مزایا";
-  const benefits = [
-    "وام",
-    "بیمه درمان تکمیلی",
-    "امور مرتبط با آموزش",
-    "بسته و هدایای مناسبتی",
-  ];
-  
-  return (
-    <div className={styles.container}>
-      <div className={styles.cart}>
-        <div className={styles.textContainer}>
-          <Title size="lg" className={styles.title}>
-            {title}
-          </Title>
-          <ul className={styles.items}>
-            {benefits.map((benefit, index) => (
-              <li key={index}>{benefit}</li>
-            ))}
-          </ul>
-        </div>
-        <div className={styles.imageContainer}>
-          <img src={"/images/salariesImg.png"} alt="" />
-        </div>
-      </div>
-      <div className={styles.buttonContainer}>
-        <Button variant="filled"  color="primary" className={styles.btn}>
-        تکمیل فرم ثبت نام
-        </Button>
-      </div>
-    </div>
-  );
+import React, { useEffect } from "react";
+import { useDeviceStore } from "@/shared/model";
+import { SalariesMobile } from "./salariesMobile";
+import { SalariesDesktop } from "./salariesDesktop";
+
+
+const MOBILE_BREAKPOINT = 991;
+
+export const Salaries = () => {
+  const { isMobile, setIsMobile } = useDeviceStore();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setIsMobile]);
+
+  return isMobile ? <SalariesMobile /> : <SalariesDesktop/>;
 };
 
-export default Salaries;
+

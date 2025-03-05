@@ -61,7 +61,11 @@
     padding: 0.875rem 1.125rem;
     font-size: 1.25rem;
     font-weight: 600;
-  }
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
   &.xs {
     border-radius: 0.5rem;
     padding: 0.5rem;
