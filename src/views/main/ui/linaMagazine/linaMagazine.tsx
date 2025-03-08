@@ -16,6 +16,14 @@ export const LinaMagazine = () => {
       <div className={classes.cardList}>
         <Swiper
           slidesPerView={4}
+          breakpoints={{
+            365: {
+              slidesPerView: 1.2,
+            },
+            992: {
+              slidesPerView: 4,
+            },
+          }}
           swiperSlides={[
             <MagazineCard />,
             <MagazineCard />,

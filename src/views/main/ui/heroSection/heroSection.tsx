@@ -33,6 +33,7 @@ export const HeroSection = () => {
             alt="hero-section-bg"
             width={750}
             height={595}
+            layout="responsive"
           />
         </div>
       </div>

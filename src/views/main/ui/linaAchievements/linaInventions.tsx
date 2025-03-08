@@ -12,14 +12,22 @@ export const LinaInventions = () => {
           height={190}
           src="/images/america.png"
           alt="امریکا"
+          layout="responsive"
         />
         <Image
           width={155}
           height={190}
           src="/images/certificate.png"
           alt="اروپا"
+          layout="responsive"
         />
-        <Image width={155} height={190} src="/images/iran.png" alt="ایران" />
+        <Image
+          width={155}
+          height={190}
+          src="/images/iran.png"
+          alt="ایران"
+          layout="responsive"
+        />
       </div>
     </>
   );

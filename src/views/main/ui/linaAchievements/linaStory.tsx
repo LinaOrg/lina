@@ -1,6 +1,9 @@
+"use client";
+import { useDeviceStore } from "@/shared/model";
 import classes from "./linaAchivements.module.scss";
 import { Button } from "@/shared/ui";
 export const LinaStory = () => {
+  const { isMobile } = useDeviceStore();
   return (
     <>
       <div className={classes.titleSection}>
@@ -16,7 +19,7 @@ export const LinaStory = () => {
         </p>
       </div>
       <div className={classes.bottomSection}>
-        <Button>ادامه داستان</Button>
+        <Button size={isMobile ? "xs" : "md"}>ادامه داستان</Button>
       </div>
     </>
   );

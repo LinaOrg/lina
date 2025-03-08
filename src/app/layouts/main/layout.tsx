@@ -65,7 +65,7 @@ export async function RootLayout({
         <link rel="apple-touch-icon" href="/icons/icon.jps" />
       </head>
       <body>
-        <Providers isMobile>
+        <Providers isMobile={isMobile}>
           <Header />
           <main>{children}</main>
           <Footer />

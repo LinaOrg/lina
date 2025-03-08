@@ -1,8 +1,11 @@
+"use client";
 import { Image } from "@/shared/ui";
 import React from "react";
 import classes from "./linaProducts.module.scss";
+import { useDeviceStore } from "@/shared/model";
 
 export const Product = () => {
+  const { isMobile } = useDeviceStore();
   return (
     <div className={classes.product}>
       <div className={classes.contentWrapper}>
@@ -14,27 +17,35 @@ export const Product = () => {
           روش فراوری جهان تولید می‌شوند.
         </p>
       </div>
-      <Image src={"/images/potato.png"} alt="" width={450} height={571} />
-      <div className={classes.storiesWrapper}>
+      <div className={classes.imageWrapper}>
         <Image
-          src={"/images/product-story.png"}
+          src={isMobile ? "/images/potato-mobile.png" : "/images/potato.png"}
           alt=""
-          width={108}
-          height={108}
-          className={classes.active}
+          width={isMobile ? 288 : 450}
+          height={isMobile ? 238 : 571}
+          layout="responsive"
         />
-        <Image
-          src={"/images/product-story.png"}
-          alt=""
-          width={108}
-          height={108}
-        />
-        <Image
-          src={"/images/product-story.png"}
-          alt=""
-          width={108}
-          height={108}
-        />
+        <div className={classes.stories}>
+          <Image
+            src={"/images/product-story.png"}
+            alt=""
+            width={isMobile ? 45 : 108}
+            height={isMobile ? 45 : 108}
+            className={classes.active}
+          />
+          <Image
+            src={"/images/product-story.png"}
+            alt=""
+            width={isMobile ? 45 : 108}
+            height={isMobile ? 45 : 108}
+          />
+          <Image
+            src={"/images/product-story.png"}
+            alt=""
+            width={isMobile ? 45 : 108}
+            height={isMobile ? 45 : 108}
+          />
+        </div>
       </div>
     </div>
   );

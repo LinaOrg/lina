@@ -12,18 +12,21 @@ export const LinaCertifications = () => {
           height={190}
           src="/images/iso45001.png"
           alt="گواهی نامه ایزو 45001"
+          layout="responsive"
         />
         <Image
           width={155}
           height={190}
           src="/images/drug.png"
           alt="گواهی نامه سازمان غذا و دارو"
+          layout="responsive"
         />
         <Image
           width={155}
           height={190}
           src="/images/iso22000.png"
           alt="گواهی نامه ایزو 22000"
+          layout="responsive"
         />
       </div>
     </>

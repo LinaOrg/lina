@@ -2,17 +2,16 @@
   margin-top: 3rem;
   .titleSection {
     text-align: center;
-    @media screen and (max-width: 991px) {
-      h3 {
-        font-size: 1rem;
-      }
-    }
     .subTitle {
       margin-top: 1rem;
       display: flex;
       align-items: center;
       gap: 2rem;
       justify-content: center;
+
+      @media screen and (max-width: 991px) {
+        font-size: 0.625rem;
+      }
     }
   }
   .productsBox {

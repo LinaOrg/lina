@@ -6,8 +6,10 @@
   --text-color-subTitle: #474747;
   --border-color: #e5e5e5;
   --shadow-color: #d2d2d280;
-  --divider-color: #B9B9B9;
-  --gray-cart-color:#F1F1F1;
+  --divider-color: #b9b9b9;
+  --gray-cart-color: #f1f1f1;
+  --product-box-bg: #fff7ee;
+  --product-box-border: #decfbd;
 }
 
 body {
@@ -16,7 +18,7 @@ body {
   font-family: var(--font-dana);
   color: var(--text-color-title);
   font-size: 1rem;
-  max-width: 1920px;  
+  max-width: 1920px;
 }
 
 * {
@@ -49,6 +51,10 @@ ul {
 
 .title {
   font-size: 2.5rem;
+
+  @media screen and (max-width: 991px) {
+    font-size: 1rem;
+  }
 }
 
 .textLink {
