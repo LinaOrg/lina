@@ -5,7 +5,7 @@ import { LinaStoryDesktop } from "./linaStoryDesktop";
 import { MOBILE_BREAKPOINT, useDeviceStore } from "@/shared/model";
 
 
-const LinaStory = () => {
+export const LinaStory = () => {
   const { isMobile, setIsMobile } = useDeviceStore();
 
   useEffect(() => {
@@ -22,4 +22,3 @@ const LinaStory = () => {
   return isMobile ? <LinaStoryMobile /> : <LinaStoryDesktop />;
 };
 
-export default LinaStory;
