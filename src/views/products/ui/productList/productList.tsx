@@ -4,6 +4,7 @@ import { Button, Image } from "@/shared/ui";
 import clsx from "clsx";
 import React, { useState } from "react";
 import classes from "./productList.module.scss";
+import { StoryContent } from "@/widgets/storyContent";
 
 interface ProductListProps {
   products: IProduct[];
@@ -62,25 +63,11 @@ export const ProductList: React.FC<ProductListProps> = ({ products }) => {
             />
           ))}
         </div>
-        <div className={classes.catStory}>
-          <div>
-            <h4>داستان خانواده چیپس های لینا</h4>
-            <p>
-              سیب‌زمینی‌ها آن‌قدر هم که فکر می‌کنید « سیب‌زمینی» نیستند! به ویژه
-              وقتی به چیپس تبدیل می‌شوند. پس چرا آنها را جدی نگیریم؟ چیپس‌ها
-              حرف‌های زیادی برای هر سلیقه‌ای دارند; به شرط آنکه طعم آن را درست
-              انتخاب کنیم! طعم‌های جدیدی که اشتهای شما را قلقلک می‌دهند. هرگاه
-              نقل از حکایت چیپس‌های دلینا باشد، سلامتی‌تان در اولویت است و خبری
-              از چربی و نمک اضافه نخواهد بود.
-            </p>
-          </div>
-          <Image
-            src={"/images/cat-story.png"}
-            alt=""
-            width={332}
-            height={303}
-          />
-        </div>
+        <StoryContent
+          title="داستان خانواده چیپس‌های دلینا"
+          description="سیب‌زمینی‌ها آن‌قدر هم که فکر می‌کنید « سیب‌زمینی» نیستند! به ویژه وقتی به چیپس تبدیل می‌شوند. پس چرا آنها را جدی نگیریم؟ چیپس‌ها حرف‌های زیادی برای هر سلیقه‌ای دارند; به شرط آنکه طعم آن را درست انتخاب کنیم! طعم‌های جدیدی که اشتهای شما را قلقلک می‌دهند. هرگاه نقل از حکایت چیپس‌های دلینا باشد، سلامتی‌تان در اولویت است و خبری از چربی و نمک اضافه نخواهد بود."
+          image={"/images/cat-story.png"}
+        />
       </div>
     </section>
   );
