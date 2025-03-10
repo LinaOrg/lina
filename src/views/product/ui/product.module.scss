@@ -1,0 +1,29 @@
+.root {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+
+  .greenBg {
+    background-color: var(--light-green);
+
+    .greenPart {
+      display: flex;
+      flex-direction: column;
+      gap: 3.375rem;
+      padding: 2rem 0;
+      h5 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

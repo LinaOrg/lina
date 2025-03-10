@@ -3,9 +3,10 @@
   .imageWrapper {
     position: relative;
     height: 310px;
-    background: url("/images/product-bg.png") no-repeat center center;
-    background-size: contain;
+    background-color: var(--product-box-bg);
+    border: 1px solid var(--product-box-border);
     margin-bottom: 2.625rem;
+    border-radius: 1.5rem;
     .productImage {
       position: relative;
       top: -7rem;
