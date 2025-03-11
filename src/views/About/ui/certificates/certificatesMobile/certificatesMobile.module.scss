@@ -1,0 +1,69 @@
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+margin: 1rem 0;
+    padding:1rem;
+  }
+  
+  .btnBox {
+    display: flex;
+    gap: 0.625rem;
+    max-width: 100%;
+   margin: 2rem 0;
+  }
+  
+  .btnBox .btn {
+    width: 7.5rem;
+    height: 1.9375rem;
+    border-radius: 1.8125rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background-color: var(--white-bg-btn);
+    color: var(--primary-color);
+    border: 0.0625rem solid var(--primary-color);
+    padding: 0;
+  }
+  
+  .btnBox .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-bg-btn);
+    transition: all 350ms linear;
+  }
+  
+  .swiper {
+    width: 100%;
+    max-width: 21.25rem;
+    height: 9.375rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 1.125rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .slideContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.8);
+  }
+  

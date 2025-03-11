@@ -1,0 +1,109 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection, .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+
+    .pic {
+        flex: 0 0 10%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        img {
+            width: 10rem; 
+            height: 11.1875rem; 
+            object-fit: cover; 
+        }
+    }
+
+    .text {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+
+        .titleText {
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: var(--text-color-title);
+            margin: 0.1rem 0;
+        }
+
+        .topContent {
+            display: flex;
+            width: 100%;
+            margin-top: 0.1rem;
+
+            span {
+                padding: 0 0.3rem;
+                img {
+                    width: 1.328rem;
+                    height: 1.328rem;
+                }
+            }
+            
+            .textBody {
+                font-weight: 400;
+                font-size: 0.625rem;
+                color: var(--text-color-subTitle);
+                margin-top: 0.1rem;
+            }
+        }
+    }
+
+    .picBottom {
+        flex: 0 0 10%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        
+        img {
+            width: 10rem;
+            height: 11.1875rem;
+            object-fit: cover; 
+        }
+    }
+
+    .textBottom {
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        font-size: 0.625rem;
+        padding-right: 0.3rem;
+
+        .titleText {
+            font-weight: 700;
+            font-size: 0.875rem;
+            color: var(--text-color-title);
+            margin: 0.1rem 0;
+        }
+
+        .bottomContent {
+            display: flex;        
+            margin-top: 0.1rem;
+            
+            span {
+                padding: 0 0.3rem;
+                img {
+                    width: 1.328rem;
+                    height: 1.328rem;
+                }
+            }
+
+            .textBody {
+                font-weight: 400;
+                font-size: 0.625rem;
+                color: var(--text-color-subTitle);
+                margin-top: 0.1rem;
+            }
+        }
+    }
+}
