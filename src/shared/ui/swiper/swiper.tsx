@@ -1,6 +1,6 @@
 "use client";
 import { Swiper as SwiperWrapper, SwiperSlide } from "swiper/react";
-import { Pagination,Navigation } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { FC } from "react";
 import { TSwiperProps } from "./swiper.types";
@@ -22,9 +22,9 @@ export const Swiper: FC<TSwiperProps> = ({
         enabled: isPagination,
       }}
       navigation={{
-        enabled: isNavigation
+        enabled: isNavigation,
       }}
-      modules={[Pagination,Navigation]}>
+      modules={[Pagination, Navigation]}>
       {swiperSlides.map((item, index) => (
         <SwiperSlide key={index}>{item}</SwiperSlide>
       ))}

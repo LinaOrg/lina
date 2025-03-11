@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { GreenPart } from "./greenPart";
 import { StoryContent } from "@/widgets/storyContent";
 import { Standards } from "@/widgets/standards";
+import { RelatedProducts } from "./relatedProducts";
 
 export const Product = async ({
   params,
@@ -54,6 +55,9 @@ export const Product = async ({
       </div>
       <div className={"container"}>
         <Standards />
+      </div>
+      <div className={"container"}>
+        <RelatedProducts />
       </div>
     </div>
   );
