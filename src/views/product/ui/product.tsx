@@ -15,7 +15,7 @@ export const Product = async ({
   const { slug } = await params;
   return (
     <div className={classes.root}>
-      <div className={"container"}>
+      {/* <div className={"container"}>
         <ProductDetails />
       </div>
       <div className={classes.greenBg}>
@@ -55,7 +55,7 @@ export const Product = async ({
       </div>
       <div className={"container"}>
         <Standards />
-      </div>
+      </div> */}
       <div className={"container"}>
         <RelatedProducts />
       </div>
