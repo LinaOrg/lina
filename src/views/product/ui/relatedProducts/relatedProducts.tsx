@@ -1,0 +1,78 @@
+"use client";
+import React, { useRef } from "react";
+import classes from "./relatedProducts.module.scss";
+import { Button, Image, Swiper } from "@/shared/ui";
+import { Product } from "@/entities";
+import clsx from "clsx";
+
+export const RelatedProducts = () => {
+  const swiperRef = useRef<any>(null);
+  return (
+    <section className={classes.root}>
+      <div className={classes.titleWrapper}>
+        <h4 className="title">دیگر رفیق‌های ترد و خوشمزه</h4>
+      </div>
+      <div className={classes.swiperWrapper}>
+        <Swiper
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          className={classes.swiper}
+          slidesPerView={3}
+          swiperSlides={[
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+            <Product
+              description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
+              image="/images/lina-lulei.png"
+              name="اسنک لوله‌ای لینا"
+            />,
+          ]}
+        />
+        <Button
+          variant="text"
+          onClick={() => swiperRef?.current?.slidePrev()}
+          className={clsx(classes.navigation, classes.prev)}>
+          <Image
+            src={"/images/navigationArrow.svg"}
+            alt=""
+            width={58}
+            height={58}
+          />
+        </Button>
+        <Button
+          variant="text"
+          onClick={() => swiperRef?.current?.slideNext()}
+          className={clsx(classes.navigation, classes.next)}>
+          <Image
+            src={"/images/navigationArrow.svg"}
+            alt=""
+            width={58}
+            height={58}
+          />
+        </Button>
+      </div>
+    </section>
+  );
+};

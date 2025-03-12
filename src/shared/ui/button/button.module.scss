@@ -42,8 +42,6 @@
       color: var(--primary-color);
     }
   }
-  &.text {
-  }
   &.xl {
     border-radius: 3rem;
   }
@@ -65,11 +63,15 @@
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
-}
+  }
   &.xs {
     border-radius: 0.5rem;
     padding: 0.5rem;
     font-size: 0.75rem;
     font-weight: 400;
+  }
+  &.text {
+    background-color: transparent;
+    padding: 0;
   }
 }

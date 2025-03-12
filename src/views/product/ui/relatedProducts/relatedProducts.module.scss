@@ -1,0 +1,49 @@
+.root {
+  margin-right: -6.25rem;
+  margin-left: -6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .titleWrapper {
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
+    text-align: center;
+  }
+  .swiperWrapper {
+    padding: 0 100px;
+    position: relative;
+    .swiper {
+      overflow: hidden;
+      padding-top: 100px;
+
+      :global(.swiper-button-next) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: -50px;
+        top: 50px;
+      }
+      :global(.swiper-button-prev) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        right: -50px;
+        top: 50px;
+      }
+    }
+    .navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &.prev {
+        right: 0;
+        left: auto;
+      }
+      &.next {
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}

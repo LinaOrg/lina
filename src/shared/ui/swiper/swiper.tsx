@@ -11,9 +11,12 @@ export const Swiper: FC<TSwiperProps> = ({
   spaceBetween = 20,
   isPagination = false,
   isNavigation = false,
+  className,
+  ...rest
 }) => {
   return (
     <SwiperWrapper
+      className={className}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log("slide change")}
@@ -24,7 +27,8 @@ export const Swiper: FC<TSwiperProps> = ({
       navigation={{
         enabled: isNavigation,
       }}
-      modules={[Pagination, Navigation]}>
+      modules={[Pagination, Navigation]}
+      {...rest}>
       {swiperSlides.map((item, index) => (
         <SwiperSlide key={index}>{item}</SwiperSlide>
       ))}
