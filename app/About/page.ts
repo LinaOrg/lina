@@ -1,1 +1,1 @@
-export { About   as default } from "@/views/about"
+export { about as default } from "@/views/about";

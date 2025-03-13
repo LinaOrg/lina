@@ -12,7 +12,7 @@ export function Main() {
       <LinaProducts />
       <Latest />
       <LinaAchievements />
-      {/* <LinaOpportunities /> */}
+      <LinaOpportunities />
       <LinaMagazine />
     </>
   );
