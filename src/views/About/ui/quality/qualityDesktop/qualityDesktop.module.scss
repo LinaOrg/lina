@@ -1,0 +1,106 @@
+.container {
+    width: 100%;
+    height: 40.44rem;
+    padding:2rem 3rem 3rem 0;
+    background-color: #DBF3D5;
+  
+    .title {
+      display: flex;
+      justify-content: start;
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 100%;
+      color: var(--text-color-subTitle);
+      .localSpan {
+        color: var(--primary-color);
+      }
+    }
+  
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      .text {
+        margin-top: 1rem;
+        width: 90%;
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: var(--text-color-subTitle);
+        .localSpan {
+          color: var(--primary-color);
+        }
+      }
+      .pic {
+        img {
+          width: 17.81rem;
+          height: 16.31rem;
+          margin-left: 0;
+        }
+      }
+    }
+  
+    .textChart {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 3rem;
+      gap: 3rem;
+      overflow: hidden;
+  
+      .item {
+        width: 25%;
+        color: var(--text-color-subTitle);
+        cursor: pointer;
+        .itemTitle {
+          font-weight: 700;
+          font-size: 1rem;
+          text-align: right;
+        }
+        .itemBody {
+          font-weight: 400;
+          font-size: 1rem;
+          margin: 1rem 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  
+    .arrows {
+      width: 100%;
+      height: 6.25rem;
+      display: flex;
+      justify-content: end;
+      align-items: start;
+      padding-left: 6rem;
+      .arrowsPart {
+        width: 15rem;
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .customDivider {
+          background-color: #FBD7B5;
+          background: linear-gradient(to left, #FBD7B5 70%, var(--primary-color) 30%);
+        }
+        .toTheLeft,
+        .toTheRight {
+          width: 2.625rem;
+          background-color: var(--primary-color);
+          height: 2.625rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--white-color);
+          font-weight: 400;
+          font-size: 1.5625rem;
+          border-radius: 0.25rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
