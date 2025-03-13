@@ -6,6 +6,7 @@ import { GreenPart } from "./greenPart";
 import { StoryContent } from "@/widgets/storyContent";
 import { Standards } from "@/widgets/standards";
 import { RelatedProducts } from "./relatedProducts";
+import { NutritionFacts } from "./nutritionFacts";
 
 export const Product = async ({
   params,
@@ -29,6 +30,9 @@ export const Product = async ({
             { image: "/images/real-potato.png", title: "سیب زمینی" },
           ]}
         />
+      </div>
+      <div className="container">
+        <NutritionFacts />
       </div>
       <div className={classes.greenBg}>
         <GreenPart

@@ -7,6 +7,7 @@
     border: 1px solid var(--product-box-border);
     margin-bottom: 2.625rem;
     border-radius: 1.5rem;
+    text-align: center;
 
     .productImage {
       position: relative;
@@ -25,11 +26,13 @@
   .contentWrapper {
     text-align: center;
 
-    h3 {
-      font-size: 0.75rem;
-    }
-    p {
-      font-size: 0.625rem;
+    @media screen and (max-width: 991px) {
+      h3 {
+        font-size: 0.75rem;
+      }
+      p {
+        font-size: 0.625rem;
+      }
     }
   }
 }

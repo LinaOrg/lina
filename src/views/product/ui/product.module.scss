@@ -2,7 +2,10 @@
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 6rem;
+  @media screen and (max-width: 991px) {
+    gap: 3rem;
+  }
 
   .greenBg {
     background-color: var(--light-green);

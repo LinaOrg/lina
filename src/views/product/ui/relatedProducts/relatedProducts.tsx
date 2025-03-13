@@ -28,43 +28,43 @@ export const RelatedProducts = () => {
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
             <Product
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
             <Product
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
             <Product
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
             <Product
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
             <Product
               description="لوله‌های پوشیده از ذرت و بدون رنگ مصنوعی"
               image="/images/lina-lulei.png"
               name="اسنک لوله‌ای لینا"
-              imageWidth={!isMobile ? 220 : 109}
-              imageHeight={!isMobile ? 270 : 129}
+              imageWidth={!isMobile ? 280 : 109}
+              imageHeight={!isMobile ? 374 : 129}
             />,
           ]}
         />
