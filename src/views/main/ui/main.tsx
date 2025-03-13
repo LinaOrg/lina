@@ -10,7 +10,7 @@ export function Main() {
     <>
       <HeroSection />
       <LinaProducts />
-      {/* <Latest /> */}
+      <Latest />
       <LinaAchievements />
       {/* <LinaOpportunities /> */}
       <LinaMagazine />
