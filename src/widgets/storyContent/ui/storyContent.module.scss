@@ -13,6 +13,7 @@
     font-size: 3rem;
     @media screen and (max-width: 991px) {
       font-size: 1rem;
+      text-align: center;
     }
   }
   p {
@@ -24,5 +25,8 @@
   }
   img {
     filter: drop-shadow(0 4px 4px var(--shadow-color));
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
 }
