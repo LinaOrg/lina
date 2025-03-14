@@ -4,14 +4,27 @@
   overflow: hidden;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  .uninons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
   .titleSection {
     text-align: center;
   }
   .itemsWrapper {
     display: flex;
     justify-content: space-around;
-    margin-top: 2rem;
     gap: 1rem;
+    max-width: 778px;
+    margin: auto;
+    margin-top: 2rem;
     p {
       width: 100%;
       max-width: 1000px;
@@ -31,6 +44,20 @@
     margin-top: 3rem;
     @media screen and (max-width: 991px) {
       margin-top: 1rem;
+    }
+  }
+  .navigation {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &.prev {
+      right: 70px;
+      left: auto;
+    }
+    &.next {
+      left: 70px;
+      right: auto;
     }
   }
 }

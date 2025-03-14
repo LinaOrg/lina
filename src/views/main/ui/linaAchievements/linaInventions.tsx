@@ -1,6 +1,9 @@
-import { Image } from "@/shared/ui";
+"use client";
+import { Button, Image } from "@/shared/ui";
 import classes from "./linaAchivements.module.scss";
+import { useDeviceStore } from "@/shared/model";
 export const LinaInventions = () => {
+  const { isMobile } = useDeviceStore();
   return (
     <>
       <div className={classes.titleSection}>
@@ -8,26 +11,27 @@ export const LinaInventions = () => {
       </div>
       <div className={classes.itemsWrapper}>
         <Image
-          width={155}
-          height={190}
+          width={isMobile ? 69 : 155}
+          height={isMobile ? 94 : 190}
           src="/images/america.png"
           alt="امریکا"
-          layout="responsive"
         />
         <Image
-          width={155}
-          height={190}
+          width={isMobile ? 69 : 155}
+          height={isMobile ? 94 : 190}
           src="/images/certificate.png"
           alt="اروپا"
-          layout="responsive"
         />
         <Image
-          width={155}
-          height={190}
+          width={isMobile ? 69 : 155}
+          height={isMobile ? 94 : 190}
           src="/images/iran.png"
           alt="ایران"
-          layout="responsive"
         />
+      </div>
+
+      <div className={classes.bottomSection}>
+        <Button size={isMobile ? "xs" : "md"}>نمایش بیشتر</Button>
       </div>
     </>
   );
