@@ -9,3 +9,4 @@ export { default as EmailIcon } from "./email";
 export { default as TriangleIcon } from "./triangle";
 export { default as CalendarIcon } from "./calendar";
 export { default as CircleArrowIcon } from "./circleArrow";
+export { default as MenuIcon } from "./menu";

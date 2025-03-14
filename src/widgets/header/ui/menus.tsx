@@ -5,8 +5,9 @@ export const Menus = () => {
   return (
     <nav className={classes.nav}>
       <Link href="/">خانه</Link>
-      <Link href="/">محصولات ما</Link>
-      <Link href="/">درباره ما</Link>
+      <Link href="/products">محصولات ما</Link>
+      <Link href="/about">درباره ما</Link>
+      <Link href="/opportunities">موقعیت های شغلی</Link>
       <Link href="/">سامانه ها</Link>
       <Link href="/">مجله</Link>
     </nav>
