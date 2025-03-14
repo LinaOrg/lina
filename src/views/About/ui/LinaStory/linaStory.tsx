@@ -6,18 +6,8 @@ import { MOBILE_BREAKPOINT, useDeviceStore } from "@/shared/model";
 
 
 export const LinaStory = () => {
-  const { isMobile, setIsMobile } = useDeviceStore();
+  const { isMobile } = useDeviceStore();
 
-  useEffect(() => {
-    const checkDevice = () => {
-      const width = window.innerWidth;
-      setIsMobile(width <= MOBILE_BREAKPOINT);
-    };
-
-    checkDevice();
-    window.addEventListener("resize", checkDevice); 
-    return () => window.removeEventListener("resize", checkDevice);
-  }, [setIsMobile]);
 
   return isMobile ? <LinaStoryMobile /> : <LinaStoryDesktop />;
 };

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const MOBILE_BREAKPOINT = 991 
+const MOBILE_BREAKPOINT = 991;
 
 interface DeviceState {
   isMobile: boolean;
