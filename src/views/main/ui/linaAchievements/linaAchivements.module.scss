@@ -25,9 +25,11 @@
     max-width: 778px;
     margin: auto;
     margin-top: 2rem;
+    @media screen and (max-width: 991px) {
+      max-width: 263px;
+    }
     p {
       width: 100%;
-      max-width: 1000px;
       margin: 0 auto;
       text-align: justify;
       text-align-last: center;
@@ -54,10 +56,16 @@
     &.prev {
       right: 70px;
       left: auto;
+      @media screen and (max-width: 991px) {
+        right: 30px;
+      }
     }
     &.next {
       left: 70px;
       right: auto;
+      @media screen and (max-width: 991px) {
+        left: 30px;
+      }
     }
   }
 }
