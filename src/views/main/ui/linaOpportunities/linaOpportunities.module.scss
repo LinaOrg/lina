@@ -56,7 +56,7 @@
         button {
           width: 100%;
           font-size: 1rem;
-
+          color: var(--text-color-title);
           @media screen and (max-width: 991px) {
             font-size: 0.625rem;
             font-weight: 400;
