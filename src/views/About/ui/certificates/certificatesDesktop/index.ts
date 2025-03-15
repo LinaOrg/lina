@@ -1,1 +1,1 @@
-export * from "./certificatesDesktop"
+export * from "./certificatesDesktop";
