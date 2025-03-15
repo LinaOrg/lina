@@ -1,5 +1,5 @@
 import { Certificates } from "./certificates";
-import { LinaStory } from "./linaStory";
+import { LinaStory } from "./LinaStory";
 import { Quality } from "./quality";
 import { Validity } from "./validity";
 
