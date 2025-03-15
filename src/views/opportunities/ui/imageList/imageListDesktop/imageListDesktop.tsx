@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import styles from "./imageListDesktop.module.scss";
-import { Title } from '@/shared/ui';
+import { Title } from "@/shared/ui";
 
 const images = [
   "/images/imageListItem1.png",
@@ -18,14 +18,18 @@ const imageTexts = [
 
 export const ImageListDesktop = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <Title size="lg" className={styles.title}>
         ارزشی که برای ما خلق می‌کنید
       </Title>
       <div className={styles.imageWrapper}>
         {images.map((src, index) => (
           <div key={index} className={styles.imageContainer}>
-            <img src="/images/border-image.png" alt="border" className={styles.borderImg} />
+            <img
+              src="/images/border-image.png"
+              alt="border"
+              className={styles.borderImg}
+            />
             <img src={src} alt={`item-${index + 1}`} className={styles.image} />
             <span className={styles.imageText}>{imageTexts[index]}</span>
           </div>

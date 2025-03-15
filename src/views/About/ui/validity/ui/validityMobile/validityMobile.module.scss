@@ -17,6 +17,9 @@
         position: relative;
 
         img {
+            position: absolute;
+            top: -1.5rem;
+            right: 0;
             width: 10rem; 
             height: 11.1875rem; 
             object-fit: cover; 
