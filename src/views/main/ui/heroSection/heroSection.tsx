@@ -31,9 +31,8 @@ export const HeroSection = () => {
           <Image
             src={"/images/hero-section.gif"}
             alt="hero-section-bg"
-            width={750}
-            height={595}
-            layout="responsive"
+            width={isMobile ? 244 : 750}
+            height={isMobile ? 191 : 595}
           />
         </div>
       </div>
