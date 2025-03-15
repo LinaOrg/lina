@@ -36,22 +36,20 @@ export const JobPosting: React.FC = () => {
   const styledTextContent = addStylingToText(textContent);
 
   return (
-    <div className="container">
-      <div className="content">
-        {isMobile ? (
-          <JobPostingMobile
-            jobTitle={jobTitle}
-            preContentText={styledPreContentText}
-            textContent={styledTextContent}
-          />
-        ) : (
-          <JobPostingDesktop
-            jobTitle={jobTitle}
-            preContentText={styledPreContentText}
-            textContent={styledTextContent}
-          />
-        )}
-      </div>
+    <div className="content">
+      {isMobile ? (
+        <JobPostingMobile
+          jobTitle={jobTitle}
+          preContentText={styledPreContentText}
+          textContent={styledTextContent}
+        />
+      ) : (
+        <JobPostingDesktop
+          jobTitle={jobTitle}
+          preContentText={styledPreContentText}
+          textContent={styledTextContent}
+        />
+      )}
     </div>
   );
 };

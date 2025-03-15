@@ -10,22 +10,26 @@ const images = [
 ];
 
 const imageTexts = [
-    "تنظیم قرارداد‌ها",
-    "محاسبه حقوق و دستمزد",
-    "پیگیری امور بیمه کارکنان",
-    "ارزیابی عملکرد کارکنان",
-  ];
+  "تنظیم قرارداد‌ها",
+  "محاسبه حقوق و دستمزد",
+  "پیگیری امور بیمه کارکنان",
+  "ارزیابی عملکرد کارکنان",
+];
 
 export const ImageListMobile = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <Title size="lg" className={styles.title}>
         ارزشی که برای ما خلق می‌کنید
       </Title>
       <div className={styles.imageWrapper}>
         {images.map((src, index) => (
           <div key={index} className={styles.imageContainer}>
-            <img src="/images/border-image.png" alt="border" className={styles.borderImg} />
+            <img
+              src="/images/border-image.png"
+              alt="border"
+              className={styles.borderImg}
+            />
             <img src={src} alt={`item-${index + 1}`} className={styles.image} />
             <span className={styles.imageText}>{imageTexts[index]}</span>
           </div>

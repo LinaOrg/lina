@@ -3,13 +3,13 @@ import { LinaStory } from "./LinaStory";
 import { Quality } from "./quality";
 import { Validity } from "./validity";
 
-export function about() {
+export function About() {
   return (
-    <>
+    <div className="container">
       <LinaStory />
       <Quality />
       <Validity />
       <Certificates />
-    </>
+    </div>
   );
 }

@@ -3,7 +3,8 @@
 import { useEffect } from 'react';
 import { MOBILE_BREAKPOINT, useDeviceStore } from "@/shared/model";
 import { CertificateDesktop } from "./certificatesDesktop";
-import { CertificatesMobile } from './certificatesMobile';
+import { CertificateMobile } from './certificatesMobile/certificatesMobile';
+
 
 
 export const Certificates = () => {
@@ -20,5 +21,5 @@ export const Certificates = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, [setIsMobile]);
 
-    return isMobile ? <CertificatesMobile/> : <CertificateDesktop />;
+    return isMobile ? <CertificateMobile/> : <CertificateDesktop />;
 };

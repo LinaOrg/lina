@@ -1,24 +1,64 @@
 .header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 68px;
   display: flex;
   gap: 1rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  align-items: center;
+
   .nav {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     a {
       padding: 0.5rem 1rem;
       display: flex;
       align-items: center;
+      white-space: nowrap;
     }
   }
+
   .userAccount {
     margin-right: auto;
     a {
       padding: 0.5rem 0.75rem;
+      white-space: nowrap;
     }
   }
+
   .logo {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 0 1rem;
+    gap: 0.5rem;
+    height: 56px;
+
+    .nav {
+      a {
+        padding: 0.5rem;
+      }
+    }
+
+    .userAccount {
+      a {
+        padding: 0.5rem;
+      }
+    }
   }
 }
