@@ -28,7 +28,7 @@ export const MagazineCard = () => {
             <CalendarIcon /> 5 آبان 1403
           </div>
           <Link href="/">
-            <Button variant="filled" color="secondary" size="sm">
+            <Button variant="filled" color="secondary" size="xs">
               مطالعه <TriangleIcon />
             </Button>
           </Link>

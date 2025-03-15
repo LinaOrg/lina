@@ -20,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    text-align: justify;
     .text {
       margin-top: 1rem;
       width: 90%;
@@ -45,6 +46,7 @@
     align-items: center;
     padding: 3rem;
     gap: 3rem;
+    text-align: justify;
     overflow: hidden;
 
     .item {
