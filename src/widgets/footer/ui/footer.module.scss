@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  margin-top: 4rem;
   img {
     z-index: 0;
   }
@@ -79,24 +80,24 @@
       }
     }
   }
-  .copyRight {
-    p {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 50px;
-      font-size: 0.75rem;
-      font-style: normal;
-      font-weight: 400;
-      @media screen and (max-width: 991px) {
-        max-width: 213px;
-        margin-bottom: 2rem;
-      }
-    }
-  }
 
   @media screen and (max-width: 991px) {
     gap: 1rem;
+  }
+}
+.copyRight {
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    @media screen and (max-width: 991px) {
+      max-width: 213px;
+      margin-bottom: 2rem;
+    }
   }
 }

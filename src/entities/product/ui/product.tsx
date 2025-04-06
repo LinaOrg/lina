@@ -10,6 +10,8 @@ export const Product: React.FC<IProduct> = ({
   id,
   image,
   name,
+  imageWidth = 381,
+  imageHeight = 407,
 }) => {
   return (
     <article className={classes.root}>
@@ -19,8 +21,8 @@ export const Product: React.FC<IProduct> = ({
             className={classes.productImage}
             src={image}
             alt={name}
-            width={381}
-            height={407}
+            width={imageWidth}
+            height={imageHeight}
           />
         </Link>
       </div>

@@ -1,0 +1,88 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 100px;
+}
+
+.btnBox {
+  display: flex;
+  gap: 2rem;
+  padding-top: 8rem;
+}
+
+.btn {
+  width: 12.5625rem;
+  height: 4rem;
+  border-radius: 1.8125rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  background-color: var(--white-bg-btn) !important;
+  color: var(--primary-color) !important;
+  border: 0.125rem solid var(--primary-color) !important;
+  padding: 0 !important;
+}
+
+.btn:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--white-bg-btn) !important;
+  transition: all 350ms linear !important;
+  -webkit-transition: all 350ms linear !important;
+  -moz-transition: all 350ms linear !important;
+  -ms-transition: all 350ms linear !important;
+  -o-transition: all 350ms linear !important;
+}
+
+.swiper {
+  width: 70%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 4.5rem;
+}
+
+.customNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: #fff7ee;
+  border-radius: 50%;
+  border: 0.0425rem solid #decfbd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.customPrev {
+  left: -3.5rem;
+}
+
+.customNext {
+  right: -3.5rem;
+}
+
+.customNav:hover {
+  background-color: var(--primary-color);
+  color: var(--white-bg-btn);
+}
+
+.customImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

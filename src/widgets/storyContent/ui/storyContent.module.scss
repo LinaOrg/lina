@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  @media screen and (max-width: 991px) {
+    > div {
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+    }
+  }
+  h4 {
+    font-size: 3rem;
+    @media screen and (max-width: 991px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    text-align: justify;
+    @media screen and (max-width: 991px) {
+      font-size: 0.875rem;
+    }
+  }
+  img {
+    filter: drop-shadow(0 4px 4px var(--shadow-color));
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+}

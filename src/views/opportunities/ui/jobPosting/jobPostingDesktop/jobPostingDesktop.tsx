@@ -16,7 +16,7 @@ export const JobPostingDesktop: React.FC<Props> = ({
   textContent,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <div className={styles.textContainer}>
         <Title size="lg" className={styles.title}>
           {jobTitle}
@@ -30,8 +30,7 @@ export const JobPostingDesktop: React.FC<Props> = ({
       </div>
       <div className={styles.imageContainer}>
         <img src="/images/handShake.png" alt="Hand Shaking" />
-      </div>  
-    
+      </div>
     </div>
   );
 };

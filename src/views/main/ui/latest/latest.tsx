@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 import classes from "./latest.module.scss";
 import clsx from "clsx";
 import Link from "next/link";
 import { Image } from "@/shared/ui";
+import { useDeviceStore } from "@/shared/model";
 
 export const Latest = () => {
+  const { isMobile } = useDeviceStore();
   const classNames = clsx("container", classes.root);
   return (
     <section className={classNames}>
@@ -12,15 +15,15 @@ export const Latest = () => {
         <h3 className="title">تازه ‌‌نفس‌های لینا</h3>
         <div className={classes.subTitle}>
           <Image
-            width={90}
-            height={22}
+            width={isMobile ? 25 : 90}
+            height={isMobile ? 6 : 22}
             alt=""
             src={"/images/arrow-to-left.svg"}
           />
           <p>جدیدترین محصولاتی که ذائقه‌تان را شگفت‌زده می‌کنند‌‍</p>
           <Image
-            width={90}
-            height={22}
+            width={isMobile ? 25 : 90}
+            height={isMobile ? 6 : 22}
             alt=""
             src={"/images/arrow-to-right.svg"}
           />
@@ -30,8 +33,8 @@ export const Latest = () => {
         <article>
           <Link href="/">
             <Image
-              width={234}
-              height={351}
+              width={isMobile ? 140 : 234}
+              height={isMobile ? 180 : 351}
               alt="crouton"
               src={"/images/meat-chips.png"}
             />
@@ -46,8 +49,8 @@ export const Latest = () => {
         <article>
           <Link href="/">
             <Image
-              width={282}
-              height={380}
+              width={isMobile ? 147 : 282}
+              height={isMobile ? 195 : 380}
               alt="crouton"
               src={"/images/crouton-chips.png"}
             />
@@ -63,8 +66,8 @@ export const Latest = () => {
         <article>
           <Link href="/">
             <Image
-              width={234}
-              height={351}
+              width={isMobile ? 140 : 234}
+              height={isMobile ? 180 : 351}
               alt="crouton"
               src={"/images/classic-chips.png"}
             />

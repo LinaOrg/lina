@@ -1,0 +1,45 @@
+.root {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  @media screen and (max-width: 991px) {
+    gap: 3rem;
+  }
+
+  .greenBg {
+    background-color: var(--light-green);
+
+    .greenPart {
+      display: flex;
+      flex-direction: column;
+      gap: 3.375rem;
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      @media screen and (max-width: 991px) {
+        gap: 2rem;
+      }
+      h5 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        @media screen and (max-width: 991px) {
+          font-size: 0.625rem;
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          text-align: center;
+          h4 {
+            @media screen and (max-width: 991px) {
+              font-size: 0.625rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

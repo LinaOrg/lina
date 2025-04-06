@@ -3,13 +3,16 @@ import { Image } from "@/shared/ui";
 import React from "react";
 import classes from "./linaProducts.module.scss";
 import { useDeviceStore } from "@/shared/model";
+import Link from "next/link";
 
 export const Product = () => {
   const { isMobile } = useDeviceStore();
   return (
     <div className={classes.product}>
       <div className={classes.contentWrapper}>
-        <h4>خانواده چیپس لینا</h4>
+        <Link href={"/product/potato"}>
+          <h4>خانواده چیپس لینا</h4>
+        </Link>
         <p>
           تنوع در چیپس‌های دلینا حرف اول را می‌زند. طعم‌های بی‌نظیری که به تردی
           و تازگی برگه‌های سیب‌زمینی اضافه شده و تجربه متفاوتی از چیپس را برای
@@ -18,13 +21,15 @@ export const Product = () => {
         </p>
       </div>
       <div className={classes.imageWrapper}>
-        <Image
-          src={isMobile ? "/images/potato-mobile.png" : "/images/potato.png"}
-          alt=""
-          width={isMobile ? 288 : 450}
-          height={isMobile ? 238 : 571}
-          layout="responsive"
-        />
+        <Link href={"/product/potato"}>
+          <Image
+            src={isMobile ? "/images/potato-mobile.png" : "/images/potato.png"}
+            alt=""
+            width={isMobile ? 288 : 450}
+            height={isMobile ? 238 : 571}
+            layout="responsive"
+          />
+        </Link>
         <div className={classes.stories}>
           <Image
             src={"/images/product-story.png"}

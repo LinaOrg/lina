@@ -3,33 +3,65 @@
   margin-top: 3rem;
   display: flex;
   gap: 2rem;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
   .contentBox {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
+    position: relative;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      gap: 1rem;
+    }
     h3 {
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 1rem;
+      @media screen and (max-width: 991px) {
+        border-bottom: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+      }
     }
     h4 {
       font-size: 2rem;
       font-weight: 500;
+      @media screen and (max-width: 991px) {
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+      }
     }
     p {
       font-size: 1.5rem;
       font-weight: 400;
+      @media screen and (max-width: 991px) {
+        font-size: 0.875rem;
+      }
     }
     ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
+      @media screen and (max-width: 991px) {
+        gap: 0.5rem;
+      }
       li {
         width: 100%;
         button {
           width: 100%;
+          font-size: 1rem;
+          color: var(--text-color-title);
+          @media screen and (max-width: 991px) {
+            font-size: 0.625rem;
+            font-weight: 400;
+            padding: 0.5rem;
+          }
         }
       }
     }
@@ -42,6 +74,12 @@
     min-height: 466px;
     img {
       object-fit: cover;
+    }
+
+    @media screen and (max-width: 991px) {
+      width: 100%;
+      min-height: 223px;
+      border-radius: 0.5rem;
     }
   }
 }

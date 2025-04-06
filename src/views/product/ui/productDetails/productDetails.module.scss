@@ -1,0 +1,90 @@
+.root {
+  display: flex;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+  .detailWrapper {
+    display: flex;
+    gap: 1rem;
+    &.mobile {
+      @media screen and (max-width: 991px) {
+        flex-direction: column;
+      }
+    }
+  }
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .title {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      @media screen and (max-width: 991px) {
+        font-size: 1rem;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      @media screen and (max-width: 991px) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .lead {
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      @media screen and (max-width: 991px) {
+        font-size: 0.75rem;
+      }
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: justify;
+      @media screen and (max-width: 991px) {
+        font-size: 0.625rem;
+      }
+    }
+  }
+  .moreDetails {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    .suitableFor {
+      display: flex;
+      gap: 0.5rem;
+      width: 50%;
+      align-items: center;
+      ul {
+        li {
+          @media screen and (max-width: 991px) {
+            font-size: 0.625rem;
+          }
+        }
+      }
+    }
+    .productSize {
+      width: 50%;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      ul {
+        width: calc(100% - 68px);
+        li {
+          display: flex;
+          @media screen and (max-width: 991px) {
+            font-size: 0.625rem;
+          }
+          p {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

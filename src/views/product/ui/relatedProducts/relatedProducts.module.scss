@@ -1,0 +1,50 @@
+.root {
+  margin-right: -6.25rem;
+  margin-left: -6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  @media screen and (max-width: 991px) {
+    margin-right: -0;
+    margin-left: -0;
+    gap: 1rem;
+  }
+  .titleWrapper {
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
+    text-align: center;
+    @media screen and (max-width: 991px) {
+      padding-right: -0;
+      padding-left: -0;
+    }
+  }
+  .swiperWrapper {
+    padding: 0 100px;
+    @media screen and (max-width: 991px) {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+    position: relative;
+    .swiper {
+      overflow: hidden;
+      padding-top: 100px;
+      @media screen and (max-width: 991px) {
+        padding-top: 50px;
+      }
+    }
+    .navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      &.prev {
+        right: 0;
+        left: auto;
+      }
+      &.next {
+        left: 0;
+        right: auto;
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+}

@@ -3,17 +3,36 @@
   .imageWrapper {
     position: relative;
     height: 310px;
-    background: url("/images/product-bg.png") no-repeat center center;
-    background-size: contain;
+    background-color: var(--product-box-bg);
+    border: 1px solid var(--product-box-border);
     margin-bottom: 2.625rem;
+    border-radius: 1.5rem;
+    text-align: center;
+
     .productImage {
       position: relative;
       top: -7rem;
       z-index: 2;
       right: 0;
     }
+    @media screen and (max-width: 991px) {
+      height: 128px;
+      margin-bottom: 1rem;
+      .productImage {
+        top: -2rem;
+      }
+    }
   }
   .contentWrapper {
     text-align: center;
+
+    @media screen and (max-width: 991px) {
+      h3 {
+        font-size: 0.75rem;
+      }
+      p {
+        font-size: 0.625rem;
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 import { Swiper as SwiperWrapper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { FC } from "react";
 import { TSwiperProps } from "./swiper.types";
@@ -10,9 +10,13 @@ export const Swiper: FC<TSwiperProps> = ({
   slidesPerView,
   spaceBetween = 20,
   isPagination = false,
+  isNavigation = false,
+  className,
+  ...rest
 }) => {
   return (
     <SwiperWrapper
+      className={className}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log("slide change")}
@@ -20,7 +24,11 @@ export const Swiper: FC<TSwiperProps> = ({
       pagination={{
         enabled: isPagination,
       }}
-      modules={[Pagination]}>
+      navigation={{
+        enabled: isNavigation,
+      }}
+      modules={[Pagination, Navigation]}
+      {...rest}>
       {swiperSlides.map((item, index) => (
         <SwiperSlide key={index}>{item}</SwiperSlide>
       ))}
